@@ -1,0 +1,4 @@
+services:
+#    tiempo_admin.example:
+#        class: Tiempo\AdminBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

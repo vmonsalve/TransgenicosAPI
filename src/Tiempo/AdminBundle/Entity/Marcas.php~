@@ -1,0 +1,39 @@
+<?php
+
+namespace Tiempo\AdminBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Marcas
+ *
+ * @ORM\Table(name="marcas")
+ * @ORM\Entity(repositoryClass="Tiempo\AdminBundle\Repository\MarcasRepository")
+ */
+class Marcas
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+
+    /**
+     * @ORM\Column(name="nombre", type="string", length=255, nullable=true)
+     */
+    private $nombre;
+
+
+    /**
+     * @ORM\OneToMany(targetEntity="Tiempo\AdminBundle\Entity\Productos", mappedBy="marcas" , cascade={"remove"})
+     * @ORM\OrderBy({"id" = "desc"})  
+     */
+    private $productos;
+
+    
+   
+}

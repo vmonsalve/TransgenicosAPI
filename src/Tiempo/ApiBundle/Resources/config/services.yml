@@ -1,0 +1,4 @@
+services:
+#    tiempo_api.example:
+#        class: Tiempo\ApiBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

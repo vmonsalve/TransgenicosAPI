@@ -1,0 +1,32 @@
+tiempo_admin_admintrador_categorias:
+    resource: "@TiempoAdminBundle/Resources/config/routing/categorias.yml"
+    prefix:   /admintrador/categorias
+
+tiempo_admin_administrador_productos:
+        resource: "@TiempoAdminBundle/Resources/config/routing/productos.yml"
+        prefix:   /administrador/productos
+
+tiempo_admin_administrador_marcas:
+        resource: "@TiempoAdminBundle/Resources/config/routing/marcas.yml"
+        prefix:   /administrador/marcas
+
+tiempo_admin_administrador_estados:
+        resource: "@TiempoAdminBundle/Resources/config/routing/estados.yml"
+        prefix:   /administrador/estados
+
+tiempo_admin_homepage:
+    path:     /
+    defaults: { _controller: TiempoAdminBundle:Default:index }
+
+tiempo_admin_login:
+    path: /login
+    defaults: {_controller: TiempoAdminBundle:Login:login}
+
+tiempo_admin_dashboard:
+    path: /administrador/dashboard
+    defaults: {_controller: TiempoAdminBundle:Default:dashboard}
+
+tiempo_admin_logout:
+    path: /logout
+    defaults: {_controller: TiempoAdminBundle:Default:logout}
+

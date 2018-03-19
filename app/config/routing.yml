@@ -1,0 +1,8 @@
+tiempo_api:
+    resource: "@TiempoApiBundle/Resources/config/routing.yml"
+    prefix:   /api
+
+tiempo_admin:
+    resource: "@TiempoAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+

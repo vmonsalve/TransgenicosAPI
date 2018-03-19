@@ -1,0 +1,23 @@
+admintrador_categorias_index:
+    path:     /
+    defaults: { _controller: "TiempoAdminBundle:Categorias:index" }
+    methods:  GET
+
+admintrador_categorias_new:
+    path:     /new
+    defaults: { _controller: "TiempoAdminBundle:Categorias:new" }
+    methods:  [GET, POST]
+
+admintrador_categorias_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TiempoAdminBundle:Categorias:edit" }
+    methods:  [GET, POST]
+
+admintrador_categorias_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TiempoAdminBundle:Categorias:delete" }
+
+administrador_categorias_categoriasGrid:
+    path: /categoriasGrid
+    defaults: {_controller: "TiempoAdminBundle:Categorias:categoriasGrid"}
+

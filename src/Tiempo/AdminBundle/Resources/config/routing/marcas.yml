@@ -1,0 +1,22 @@
+administrador_marcas_index:
+    path:     /
+    defaults: { _controller: "TiempoAdminBundle:Marcas:index" }
+    methods:  GET
+
+administrador_marcas_new:
+    path:     /new
+    defaults: { _controller: "TiempoAdminBundle:Marcas:new" }
+    methods:  [GET, POST]
+
+administrador_marcas_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TiempoAdminBundle:Marcas:edit" }
+    methods:  [GET, POST]
+
+administrador_marcas_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TiempoAdminBundle:Marcas:delete" }
+
+administrador_marcas_marcasGrid:
+    path: /marcasGrid
+    defaults: {_controller: "TiempoAdminBundle:Marcas:marcasGrid"}

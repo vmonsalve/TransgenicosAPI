@@ -1,0 +1,3 @@
+tiempo_api_homepage:
+    path:     /
+    defaults: { _controller: TiempoApiBundle:Default:index }

@@ -1,0 +1,42 @@
+{% extends "TiempoAdminBundle:BASE:baselogin.html.twig" %}
+{% block container %}
+<div class="login-box">
+  	<div class="login-logo">
+    	<a href="{{path('tiempo_admin_homepage')}}"><b>Transgénicos</b></a>
+      <img class="center" src="{{ asset('bundles/tiempoadmin/dist/img/non_gmo_large.png')}}" alt="non gmo">
+  	</div>
+  	<!-- /.login-logo -->
+  	<div class="login-box-body">
+    	<p class="login-box-msg"></p>
+      {% for flashMessage in app.session.flashbag.get('login') %}
+        <div class="alert alert-danger alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h4><i class="icon fa fa-ban"></i> Alert!</h4>
+          {{flashMessage}}
+        </div>
+      {% endfor %}
+
+    	<form action="{{path('tiempo_admin_login')}}" method="post">
+      		<div class="form-group has-feedback">
+        		<input  name="nusuario"  type="text" class="form-control" placeholder="Email">
+        		<span class="glyphicon glyphicon-user form-control-feedback"></span>
+      		</div>
+      		<div class="form-group has-feedback">
+        		<input name="password" type="password" class="form-control" placeholder="Password">
+        		<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      		</div>
+      		<div class="row">
+        		<div class="col-xs-8">
+          	</div>
+        		<!-- /.col -->
+        		<div class="col-xs-4">
+          			<button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
+        		</div>
+        		<!-- /.col -->
+      		</div>
+    	</form>
+  	</div>
+  	<!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+{% endblock %}

@@ -1,0 +1,57 @@
+<?php
+
+namespace Tiempo\AdminBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuarios
+ *
+ * @ORM\Table(name="usuarios")
+ * @ORM\Entity(repositoryClass="Tiempo\AdminBundle\Repository\UsuariosRepository")
+ */
+class Usuarios
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @ORM\Column(type="string", length=25, unique=true)
+     */
+    private $username;
+
+    /**
+     * @ORM\Column(type="string", length=32)
+     */
+    private $salt;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $password;
+
+    /**
+     * @ORM\Column(type="string", length=60)
+     */
+    private $email;
+
+    /**
+     * @ORM\Column(name="is_active", type="boolean")
+     */
+    private $isActive;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Tiempo\AdminBundle\Entity\Roles", inversedBy="usuarios" )
+     * @ORM\JoinColumn(name="roles_id", referencedColumnName="id")
+     */
+    private $roles;
+
+    
+}
+

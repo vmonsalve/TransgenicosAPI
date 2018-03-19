@@ -1,0 +1,22 @@
+administrador_productos_index:
+    path:     /
+    defaults: { _controller: "TiempoAdminBundle:Productos:index" }
+    methods:  GET
+
+administrador_productos_new:
+    path:     /new
+    defaults: { _controller: "TiempoAdminBundle:Productos:new" }
+    methods:  [GET, POST]
+
+administrador_productos_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TiempoAdminBundle:Productos:edit" }
+    methods:  [GET, POST]
+
+administrador_productos_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TiempoAdminBundle:Productos:delete" }
+
+administrador_productos_productosGrid:
+    path: /productosGrid
+    defaults: {_controller: "TiempoAdminBundle:Productos:productosGrid"}

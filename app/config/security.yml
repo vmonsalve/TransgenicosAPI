@@ -1,0 +1,23 @@
+security:
+    providers:
+        usuarios:
+            entity: { class: TiempoAdminBundle:Usuarios, property: username }
+
+    encoders:
+        Tiempo\AdminBundle\Entity\Usuarios:
+            algorithm: bcrypt
+            cost: 4
+
+    firewalls:
+        secured_area:
+            pattern:    ^/administrador
+            context: secured_admin
+            form_login:
+                login_path:   tiempo_admin_login
+                check_path:   tiempo_admin_login
+            logout:
+                path:   /logout
+                target: /
+
+    access_control:
+        - { path: ^/administrador, roles: [ROLE_ADMIN]}

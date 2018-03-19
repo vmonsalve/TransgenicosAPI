@@ -1,0 +1,16 @@
+{% extends "TiempoAdminBundle:BASE:base.html.twig" %}
+{% block title %}{{titulo}}{% endblock %}
+{% block container %}
+<!-- left column -->
+<div class="col-xs-12">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <!-- /.box-header -->
+            {{ form_start(form) }}
+                {{ form_widget(form) }}
+                <input class="btn btn-primary" type="submit" value="Guardar" style="margin-top:15px;"/>
+            {{ form_end(form) }}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+administrador_estados_index:
+    path:     /
+    defaults: { _controller: "TiempoAdminBundle:Estados:index" }
+    methods:  GET
+
+administrador_estados_new:
+    path:     /new
+    defaults: { _controller: "TiempoAdminBundle:Estados:new" }
+    methods:  [GET, POST]
+
+administrador_estados_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "TiempoAdminBundle:Estados:edit" }
+    methods:  [GET, POST]
+
+administrador_estados_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "TiempoAdminBundle:Estados:delete" }
